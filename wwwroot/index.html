@@ -1,42 +1,79 @@
 ﻿<!DOCTYPE html>
 <html>
-
 <head>
-    <title>Prof. Ganderson Fan Site</title>
+    <title>Ryan's Profile</title>
     <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/Account.ico" />
 </head>
 
-<body>
-    <h1>Prof. Ganderson Fan Site</h1>
-    <img src="img/download.jfif" />
-    <p>Prof. Greg Anderson is a professor in the information systems depatrment at byu</p>
-    <br />
-    <p> pop Quiz: We love him because...</p>
-    <ul class="quiz-props">
-        <li>A: The lucsious locks he had when he was growing up.</li>
-        <li>B: He can pound a pound of bacon like it ain't no than</li>
+    <body>
+        <header>
+            <h1>Ryan's Profile</h1>
+        </header>
+        <div class="main">
+            <h2 class="sectionTitle">What I do for fun</h2>
+            <div class="card">
+                <img class="funPic" src="img/meemmafair.jpg" />
+                <p class="picDescrip">
+                    Pictured above is my girlfriend and I at the Utah State Fair
+                    (because my main hobby (for better or worse) is doing things with my girlfriend.)
+                </p>
+            </div>
 
-    </ul>
+            <h2>What I hope to get out of IS 413</h2>
+            <div class="card">
+                <p>
+                    I hope to gain extensive knowledge of this framework because of its wide use in industry.
+                    I want to be able to utilize these skills at the end of the semester with industry-level
+                    proficiency. I also hope this will make me better equipped to deal with all types of languages
+                    and frameworks, and I love that I will be able to add another programming language to my skills
+                    bank.
+                </p>
+            </div>
 
-    <h2> Fan Mail</h2>
-    <form>
-        <label>From: </label>
-        <input id="from"/>
-        <br />
-        <label>Email: </label>
-        <input id="email" />
-        <br />
-        <label>Subject: </label>
-        <input id="subject" />
-        <br />
-        <label>Message: </label>
-        <textarea id="message" rows="5"></textarea>
-        <br />
-        <br />
-        <input type="submit" value="Send Message" id="submitButton" />
-    </form>
+            <h2>Top Three Jobs</h2>
+            <div class="card">
+                <ol>
+                    <li>Data Analyst</li>
+                    <li>Software Developer</li>
+                    <li>Tech Entrepreneur</li>
+                </ol>
+            </div>
 
-    <script src="js/fanmail.js"></script>
-</body>
+            <h2>Grade Calculator</h2>
+            <div class="card">
+                <p class="picDescrip">Please input the percent you received of each category below: </p>
+                <form>
+                    <label>Assignments:</label>
+                    <input id="assignment" />
+                    <br />
+                    <label>Group Project: </label>
+                    <input id="groupProject" />
+                    <br />
+                    <label>Quizzes: </label>
+                    <input id="quiz" />
+                    <br />
+                    <label>Exams: </label>
+                    <input id="exam" />
+                    <br />
+                    <label>INTEX: </label>
+                    <input id="intex" />
+                    <br />
+                    <br />
+                    <input type="button" value="Calculate" id="submitButton" />
+                </form>
+                <!-- This is where the grade message will be populated by the javascript when the submit button is pressed -->
+                <p id="gradeMessage"></p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <br />
+                <div>©2021 Ryan's Profile</div>
+            </div>
+        </footer>
+        <script src="js/gradeCalc.js"></script>
+    </body>
 
 </html>
