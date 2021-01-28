@@ -1,7 +1,4 @@
-﻿var submit = document.getElementById("submitButton");
-
-submit.addEventListener("click", function () {
-
+﻿$("#submitButton").click( function () {
     // this section sets the grade category weights
     const assignmentWeight = .5;
     const groupProjectWeight = .1;
@@ -10,11 +7,11 @@ submit.addEventListener("click", function () {
     const intexWeight = .1;
 
     // this section collects the scores from the form
-    var assignmentScore = document.getElementById("assignment").value;
-    var groupProjectScore = document.getElementById("groupProject").value;
-    var quizScore = document.getElementById("quiz").value;
-    var examScore = document.getElementById("exam").value;
-    var intexScore = document.getElementById("intex").value;
+    var assignmentScore = $("#Assignment").val();
+    var groupProjectScore = $("#GroupProject").val();
+    var quizScore = $("#Quiz").val();
+    var examScore = $("#Exam").val();
+    var intexScore = $("#Intex").val();
 
     // this computes the final grade as a percent
     var finalGrade = (assignmentWeight * assignmentScore) + (groupProjectWeight * groupProjectScore) + (quizWeight * quizScore) + (examWeight * examScore) + (intexWeight * intexScore);
@@ -59,6 +56,6 @@ submit.addEventListener("click", function () {
         gradeLetter = "E";
     }
 
-    // this updates the HTML where the message is displayed.
-    document.getElementById("gradeMessage").innerHTML = ("Your final grade percent is: " + finalGrade + ". This means you got a letter grade of: " + gradeLetter);
-})
+    gradeMessage = ("Your final grade percent is: " + finalGrade + ". This means you got a letter grade of: " + gradeLetter);
+    alert(gradeMessage);
+});
